@@ -7,19 +7,29 @@ Dark green: #28b485
 
 */
 
-* {
+*,
+*::after,
+*::before {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  box-sizing: inherit;
+  backface-visibility: hidden !important;
+}
+
+html {
+  /* Aqui ponemos 62.5% para que el font size sea ese porcentaje del font-size del navegador (por si el usuario la cambia) que el defacult es 16px -> 16 * 0.625 = 10px */
+  font-size: 62.5%;
+  /* font-size: 10px; */
+ 
 }
 
 body {
   font-family: "Lato", sans-serif;
   font-weight: 400;
-  font-size: 16px;
-  line-height: 1.7px;
+  line-height: 0.17rem;
   color: #777;
-  padding: 30px;
+  padding: 3rem;
+  box-sizing: border-box;
 }
 
 .header {
@@ -39,12 +49,12 @@ body {
 
 .logo-box {
   position: absolute;
-  top: 40px;
-  left: 40px;
+  top: 4rem;
+  left: 4rem;
 }
 
 .logo {
-  height: 35px;
+  height: 3.5rem;
 }
 
 .text-box {
@@ -59,15 +69,15 @@ body {
   color: #fff;
   text-transform: uppercase;
 
-  backface-visibility: hidden;
-  margin-bottom: 30px;
+  backface-visibility: hidden !important;
+  margin-bottom: 3rem;
 }
 
 .heading-primary--main {
   display: block;
-  font-size: 60px;
+  font-size: 6rem;
   font-weight: 400;
-  letter-spacing: 35px;
+  letter-spacing: 3.5rem;
   height: 8vh;
 
   animation-name: moveInLeft;
@@ -79,9 +89,9 @@ body {
 
 .heading-primary--sub {
   display: block;
-  font-size: 20px;
+  font-size: 2rem;
   font-weight: 700;
-  letter-spacing: 17.4px;
+  letter-spacing: 1.75rem;
   height: 2vh;
 
   animation: moveInRight 1s ease-out;
@@ -90,11 +100,11 @@ body {
 @keyframes moveInLeft {
   0% {
     opacity: 0;
-    transform: translateX(-100px);
+    transform: translateX(-10rem);
   }
 
   80% {
-    transform: translateX(10px);
+    transform: translateX(1rem);
   }
 
   100% {
@@ -106,11 +116,11 @@ body {
 @keyframes moveInRight {
   0% {
     opacity: 0;
-    transform: translateX(100px);
+    transform: translateX(10rem);
   }
 
   80% {
-    transform: translateX(-10px);
+    transform: translateX(-1rem);
   }
 
   100% {
@@ -122,7 +132,7 @@ body {
 @keyframes moveInBottom {
   0% {
     opacity: 0;
-    transform: translateY(50px);
+    transform: translateY(5rem);
   }
 
   100% {
@@ -135,25 +145,25 @@ body {
 .btn:visited {
   text-transform: uppercase;
   text-decoration: none;
-  padding: 20px 40px;
+  padding: 2rem 4rem;
   display: inline-block;
-  border-radius: 100px;
+  border-radius: 10rem;
   position: relative;
-
+  font-size: 1.5rem;
   /* Aqui decimos que todas las propiedades son animables con 0.2s de duracion. Luego en los hover, active, etc determinado que se hace exactamente */
   transition: all 0.2s;
 }
 
 .btn:hover {
-  transform: translateY(-3px);
+  transform: translateY(-0.3rem);
 
   /* x y blur color*/
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
 }
 
 .btn:active {
-  transform: translateY(-1px);
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  transform: translateY(-0.1rem);
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
 }
 
 .btn-white {
@@ -169,7 +179,7 @@ body {
   display: inline-block;
   height: 100%;
   width: 100%;
-  border-radius: 100px;
+  border-radius: 10rem;
 
   position: absolute;
   top: 0;
@@ -188,6 +198,6 @@ body {
 }
 
 .btn-animated {
-  animation: moveInBottom 0.5s ease-out .75s;
+  animation: moveInBottom 0.5s ease-out 0.75s;
   animation-fill-mode: backwards;
 }
