@@ -1,0 +1,23 @@
+{
+  "name": "advanced-css-course",
+  "version": "1.0.0",
+  "description": "Learning css and scss",
+  "main": "index.js",
+  "scripts": {
+    "compile:sass": "node-sass sass/main.scss Natours/starter/css/style.css -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/apkouk/advanced-css-course.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/apkouk/advanced-css-course/issues"
+  },
+  "homepage": "https://github.com/apkouk/advanced-css-course#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "node-sass": "^6.0.0"
+  }
+}

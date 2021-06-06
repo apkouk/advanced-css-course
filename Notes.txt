@@ -3,8 +3,10 @@ relative absolute position
 animation-timing-function
 pseudo classes (linkm visited...)
 animation-fill-mode
+clear-fix
+scss built-in functions
 
 
 [class]::after
 -----------------------
-Con esto lo que hacemos es crear una copia de la clase para jugar con ella. Es como si pusieramos una copia detrás del elemento con sus propias caraterísticas
+Con esto lo que hacemos es crear una copia del selector para jugar con ella. Es como si pusieramos una copia detrás del elemento con sus propias caraterísticas
