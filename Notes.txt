@@ -6,7 +6,21 @@ animation-fill-mode
 clear-fix
 scss built-in functions
 
+Mixins, Extends and Functions
+https://www.udemy.com/course/advanced-css-and-sass/learn/lecture/8274458#questions/5078110
 
+
+-------------------------------
+Para ver cambios en directo :)
+----------------------------------------------------------------------------------------------------------------------------
+Vamos a la carpeta donde está el html root y ejecutamos live-server
+En la carpeta raiz ejecutamos npm run compile:sass
+
+
+-------------------------------
 [class]::after
------------------------
+----------------------------------------------------------------------------------------------------------------------------
 Con esto lo que hacemos es crear una copia del selector para jugar con ella. Es como si pusieramos una copia detrás del elemento con sus propias caraterísticas
+
+
+
